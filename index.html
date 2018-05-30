@@ -17,11 +17,13 @@
 				width:100%;
 				margin:0px auto;
 				background:#666;
+				display:none;
 			}
 			
 			.menu{
 				position:absolute;
 				bottom:0px;
+				display:none;
 			}
 			
 		</style>
@@ -60,6 +62,9 @@
 				$(this).fadeOut();
 				return false;
 			});
+
+			$('#page-1').find('component').trigger('onLoad');
+			
 		});
 	</script>
 	
@@ -68,7 +73,7 @@
 		
 		<div id="h5">
 			<div class="page section" id="page-1">
-					<div class="component content-pic">content-pic</div>
+				<div class="component content-pic">content-pic</div>
 				<div class="component menu">menu</div>
 			</div>
 			<div class="page section" id="page-2">
